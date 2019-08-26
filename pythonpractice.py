@@ -44,7 +44,7 @@ the_vars = {
     'K': {'2SO'},
     'C': ['3PO'],
     'BB': '8',
-    'L': 3,
+    'L': [ 3 ],
     'Poppins': set(list('supercalifragilisticexpialidocious')),
     'Galactica': { 'Karl':'Helo', 'Kara':'Starbuck', 'Lee':'Apollo', 
         'Sharon':'Boomer', 'Marge':'Racetrack', 'Louanne':'Kat' }
