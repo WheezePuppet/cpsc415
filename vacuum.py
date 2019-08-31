@@ -25,8 +25,8 @@ class VacuumEnvironment(XYEnvironment):
 
     """The environment of [Ex. 2.12]. Agent perceives dirty or clean, and bump
     (into obstacle) or not; 2D discrete world of unknown size; performance
-    measure is 40 for each square of dirt cleaned, -5 for each 'suck' action,
-    and -2 for each move action."""
+    measure is 80 for each square of dirt cleaned, -10 for each 'suck' action,
+    and -3 for each move action."""
 
     def __init__(self, width=10, height=10):
         super().__init__(width, height)
@@ -49,17 +49,17 @@ class VacuumEnvironment(XYEnvironment):
             print("Illegal action {}! Shutting down.".format(action))
             sys.exit(1)
         if action == 'Suck':
-            agent.performance -= 5
+            agent.performance -= 10
             dirt_list = self.list_things_at(self[agent], Dirt)
             if dirt_list != []:
                 dirt = dirt_list[0]
-                agent.performance += 40
+                agent.performance += 80
                 self.delete_thing(dirt)
         else:
             super().execute_action(agent, action)
 
         if action in {'Left','Right','Up','Down'}:
-            agent.performance -= 2
+            agent.performance -= 3
 
     def is_clean(self):
         return all([ type(thing) is not Dirt for thing in self ])
