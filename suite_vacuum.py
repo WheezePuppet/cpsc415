@@ -73,7 +73,7 @@ class Suite():
                 max(steps), int(statistics.median(steps))), file=f)
         os.system('cat outputheader.csv output3.csv > ' +
             'output_' + userid + '.csv')
-        os.system('rm output*.csv')
+        os.system('rm output[0-9]*.csv')
         os.system('head -2 output_' + userid + '.csv')
         print('Output in output_' + userid + '.csv.')
         
