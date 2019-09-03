@@ -76,4 +76,10 @@ class Suite():
         os.system('rm output[0-9]*.csv')
         os.system('head -2 output_' + userid + '.csv')
         print('Output in output_' + userid + '.csv.')
-        
+        med = statistics.median(scores)
+        if med > 4000:
+            print("\n{} earned +40XP! (the max)".format(userid))
+        elif med < 0:
+            print("\n{} earned +0XP, sorry!".format(userid))
+        else:
+            print("\n{} earned +{}XP!".format(userid,int(med / 100)))
