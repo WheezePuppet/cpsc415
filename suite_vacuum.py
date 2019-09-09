@@ -82,4 +82,4 @@ class Suite():
         elif med < 0:
             print("\n{} earned +0XP, sorry!".format(userid))
         else:
-            print("\n{} earned +{}XP!".format(userid,int(med / 100)))
+            print("\n{} earned +{}XP!".format(userid,math.ceil(med / 100)))
