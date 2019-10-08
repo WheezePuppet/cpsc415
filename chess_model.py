@@ -78,6 +78,9 @@ class Board(UserDict):
             if isinstance(piece, King) and piece.color==color:
                 return loc
         logging.critical('Whoa -- no {} king!'.format(color))
+        for x, y in self.items():
+            print("there is {} at {}".format(y,x))
+        import sys; sys.exit(1)
 
     def is_king_in_check(self, color):
         '''Return True if the player whose color is passed is currently in
