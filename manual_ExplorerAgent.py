@@ -1,6 +1,6 @@
 '''
 CPSC 415 -- Homework #4 support file
-Stephen Davies, University of Mary Washington, fall 2017
+Stephen Davies, University of Mary Washington, fall 2019
 '''
 
 from wumpus import ExplorerAgent
