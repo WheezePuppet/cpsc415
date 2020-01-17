@@ -4,6 +4,7 @@ CPSC 415 -- Homework #3 support file
 Stephen Davies, University of Mary Washington, fall 2019
 '''
 
+
 # Long long ago, I used chapter 4 of Chaudhary's "Tkinter GUI Blueprints" as a
 # starting point for this. It has since evolved unrecognizeably.
 
